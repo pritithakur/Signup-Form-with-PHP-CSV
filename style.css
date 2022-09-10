@@ -1,0 +1,148 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins' ,sans-serif;
+}
+html,body{
+    display:grid;
+    height:100%;
+    place-items:center;
+    background-image: url(image/bg.jpg);
+    background-repeat: none;
+    background-size: 100% 100%;
+}
+.wrapper{
+    overflow: hidden;
+    width:380px;
+    height:500px;
+    background:#fff;
+    padding:30px;
+    border-radius:5px;
+    box-shadow:0px 15px 20px rgba(0,0,0,0.1);
+}
+.wrapper .text{
+    display:flex;
+    width:200%;
+}
+.wrapper .text .register{
+    width:50%;
+    font-size:20px;
+    font-weight:400px;
+    text-align:center;
+}
+.wrapper .form-container{
+    width:100%;
+    overflow: hidden;
+}
+.form-container .form{
+    display:flex;
+    width:200%;
+    height:500rem;
+}
+.form-container .form form{
+    transition:all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-container form .field{
+    height:40px;
+    width:80%;
+    margin-left:0rem;
+}
+.form form .field input{
+    margin-top:1rem;
+    height:100%;
+    width:100%;
+    outline:none;
+    padding-left:15px;
+    font-size:17px;
+    border-radius:5px;
+    border:1px solid lightgrey;
+    border-bottom-width:2px;
+    transition: all 0.4s ease ;
+}
+.form form .field input:focus{
+    border-color:#3cb3b5;
+}
+.form form .link{
+    text-align: center;
+}
+.form form .link a{
+    color:#c63b3b;
+    text-decoration:none;
+}
+.form form .link a:hover{
+    color:#c63b3b;
+    text-decoration:underline;
+}
+.form form .linkb{
+    text-align: center;
+}
+.form form .linkb a{
+    color:#c63b3b;
+    text-decoration:none;
+}
+.form form .linkb a:hover{
+    color:#c63b3b;
+    text-decoration:underline;
+}
+form .field input[type="submit"]
+{
+    color:#fff;
+    font-size:20px;
+    font-weight:500;
+    padding-left:0px;
+    border:none;
+    cursor:pointer;
+    background:-webkit-linear-gradient(left, #744d4d,#693935);
+}
+.form-container .slide{
+    display:flex;
+    height:50px;
+    width:100%;
+    border-radius: 5px;
+    position: relative;
+    overflow:hidden;
+    margin: 30px 0 10px 0;
+    justify-content:space-between;
+    border:1px solid lightgrey;
+}
+.slide .s{
+   height:100%;
+   width:100%;
+   font-size:18px;
+   font-weight:500;
+   text-align:center;
+   line-height:50px;
+   cursor:pointer; 
+   z-index:1;
+   color:#fff;
+   transition: all 0.6s ease;
+}
+.slide .tab{
+    position:absolute;
+    height: 100%;
+    width:50%;
+    left:0;
+    transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+    z-index:0;
+    border-radius: 5px;
+    background:-webkit-linear-gradient(left, #744d4d,#693935);
+}
+input [type="radio"]{
+    display:none;
+    text-decoration: none;
+}
+.slide .login{
+    color:#000;
+}
+#login:checked ~ .tab{
+    left:50%;
+}
+
+#login:checked ~ .login{
+    color:#fff;
+}
+#login:checked ~ .register{
+    color:#000;
+}
